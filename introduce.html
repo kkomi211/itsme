@@ -4,8 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* body{
+            background-image: url("../media/bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        } */
+        #header{
+            width: 800px;
+            height: 100px;
+            text-align: center;
+            font-size:50px;
+            background-color: antiquewhite; 
+            padding: 0pt auto;
+            margin: 10pt auto;
+            box-sizing: border-box;
+        }
+        #container{
+            width: 800px;
+            box-shadow: 2px 2px 5px;
+            margin: 0pt auto;
+            border-radius: 5px;
+        }
+        .sidebar{
+            width: 20%;
+            height: 750px;
+            background-color: aliceblue;
+            text-align: center;
+            float: left;
+        }
+        .sidebar2{
+            width: 40%;
+            height: 750px;
+            background-color: aliceblue;
+            text-align: center;
+            float: left;
+        }
+        #contents{
+            width: 40%;
+            height: 750px;
+            background-color: azure;
+            float: left;
+        }
+        #footer{
+            width: 100%;
+            height: 100px;
+            background-color: white;
+            clear: left;
+            
+        }
+        .round{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .line{
+            margin: 10px;
+        }
+        .bold{
+            font-weight: bold;
+            font-size: 30px;
+            margin: 20px 10px;
+        }
+    </style>
 </head>
 <body>
-    자기소개 수정된 페이지 .
+    <div id="header">
+        자기소개
+    </div>
+    <div id="container">
+        <div class="sidebar">
+            <img src="../media/kkomi2.jpg" class="round">
+            <div class="line bold">정은성</div>
+            <div class="line">2001.11.19일 출생</div>
+            <div class="line">개발자 희망합니다 <br> 연락주세요</div>
+            <div class="line">garjee1005@<br>naver.com</div>
+            <a href="https://github.com/kkomi211"><img src="../media/git.jpg" style="width: 50px; height: 50px;"></a>
+        </div>
+        <div id="contents">
+            <div>
+                <div class="line bold">자기 소개</div><hr>
+                <div class="line">저는 부평공원 근처 살고 있구요</div>
+                <div class="line">코딩 열심히 배우겠습니당</div>
+            </div>
+            <div>
+                <div class="line bold">취미</div><hr>
+                <div class="line">게임, 운동</div>
+                <a href="https://op.gg/ko/lol/summoners/kr/%EA%B9%80%EA%B8%B0%EC%97%B0%EB%8B%98%EC%9D%98%EA%B0%9C-china"><div class="line">롤 계정</div></a>
+            </div>
+            <div>
+                <div class="line bold">학력</div><hr>
+                <div class="line">한신대 컴공 4학년 재학중</div>
+            </div>
+            <div>
+                <div class="line bold">보유 기술이나 자격증</div><hr>
+                <div class="line">
+                    <ul>
+                        <li>자바</li>
+                        <li>오라클</li>
+                        <li>C</li>
+                        <li>python</li>
+                        <li>정처기 필기</li>
+                        <li>리눅스 마스터 1차</li>
+                        <li>태권도 3단</li>
+                        <li>피아노 체르니 50</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar2">
+            <div class="line bold">우리집 꼬미</div>
+            <video src="../media/kkomi.mp4" autoplay loop muted style="width:100%"></video>
+            <div class="line">나이 : 6세</div>
+            <div class="line">성별 : 남</div>
+            <div class="line">비숑 + 푸들</div>
+
+        </div>
+        <div id="footer">
+            <img src="https://ssl.pstatic.net/melona/libs/1538/1538381/39197f5a0198aa459339_20250730143412445.png"
+                 style="width: 20%; float: left;">
+            <div class="line">초록우산</div>
+            <div class="line">어린이와 당신을 썹포트유</div>
+            <div class="line">월 1만원 후원시 써브웨이 2만원 쿠폰 증정</div>
+        </div>
+    </div>
 </body>
 </html>
