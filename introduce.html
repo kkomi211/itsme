@@ -1,132 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <style>
-        /* body{
-            background-image: url("../media/bg.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-        } */
-        #header{
-            width: 800px;
-            height: 100px;
-            text-align: center;
-            font-size:50px;
-            background-color: antiquewhite; 
-            padding: 0pt auto;
-            margin: 10pt auto;
-            box-sizing: border-box;
+        body{
+            background-color: blanchedalmond;
         }
-        #container{
-            width: 800px;
-            box-shadow: 2px 2px 5px;
-            margin: 0pt auto;
-            border-radius: 5px;
-        }
-        .sidebar{
-            width: 20%;
-            height: 750px;
-            background-color: aliceblue;
-            text-align: center;
-            float: left;
-        }
-        .sidebar2{
-            width: 40%;
-            height: 750px;
-            background-color: aliceblue;
-            text-align: center;
-            float: left;
-        }
-        #contents{
-            width: 40%;
-            height: 750px;
-            background-color: azure;
-            float: left;
-        }
-        #footer{
-            width: 100%;
-            height: 100px;
-            background-color: white;
-            clear: left;
+        #container {
+            width: 80%;
+            margin: 10px auto;
             
         }
-        .round{
-            width: 150px;
-            height: 150px;
+
+        #profile {
+            width: 20%;
+            height: 800px;
+            background-color: rgb(79, 169, 230);
+            text-align: center;
+            color: white;
+            box-sizing: border-box;
+            float: left;
+        }
+
+        #profile img {
             border-radius: 50%;
+            margin: 20px 0px;
+            width: 170px;
         }
-        .line{
-            margin: 10px;
-        }
-        .bold{
-            font-weight: bold;
+
+        .big {
             font-size: 30px;
-            margin: 20px 10px;
+            font-weight: bold;
+            margin: 30px;
+        }
+
+        .bbig {
+            font-size: 50px;
+            font-weight: bold;
+            margin: 30px;
+        }
+
+        #title {
+            width: 80%;
+            float: left;
+            height: 100px;
+            box-sizing: border-box;
+            text-align: center;
+            color: #ffaeaf;
+            background-color: white;
+        }
+
+        .ggimg {
+            font-size: 50px;
+            margin: 20px 0px;
+        }
+
+        .ctimg {
+            font-size: 40px;
+            margin: 20px 0px;
+        }
+
+        .contents {
+            width: 80%;
+            float: left;
+            height: 700px;
+            box-sizing: border-box;
+            color: #ffaeaf;
+            font-size: 40px;
+            padding: 20px;
+            font-weight: bold;
+            background-color: white;
+            position: relative;
+        }
+
+        #profile {
+            font-size: 20px;
+        }
+        .small{
+            font-size: 25px;
+            margin: 10px 0px 10px 60px;
+        }
+        .end{
+            margin-bottom: 60px;
+        }
+        .table{
+            font-size : 25px;
+        }
+        table, tr, td, td{
+            border: 1px solid #ffaeaf;
+            border-collapse: collapse;
+            margin: 10px 60px;
+           
+        }
+        .table_title{
+            background-color: #ffaeaf;
+            color: white;
+            border: 1px solid white;
+            
+        }
+        .arrow{
+            font-size: 60px;
+            position: absolute;
+            right: 10px;
+            bottom : 10px;
+            cursor: pointer;
+        }
+        .backarrow{
+            font-size: 60px;
+            position: absolute;
+            left: 10px;
+            bottom : 10px;
+            cursor: pointer;
+        }
+
+        .arrow:hover {
+            font-size: 65px;
+        }
+        
+        #page2{
+            display: none;
         }
     </style>
 </head>
-<body>
-    <div id="header">
-        자기소개
-    </div>
-    <div id="container">
-        <div class="sidebar">
-            <img src="../media/kkomi2.jpg" class="round">
-            <div class="line bold">정은성</div>
-            <div class="line">2001.11.19일 출생</div>
-            <div class="line">개발자 희망합니다 <br> 연락주세요</div>
-            <div class="line">garjee1005@<br>naver.com</div>
-            <a href="https://github.com/kkomi211"><img src="../media/git.jpg" style="width: 50px; height: 50px;"></a>
-        </div>
-        <div id="contents">
-            <div>
-                <div class="line bold">자기 소개</div><hr>
-                <div class="line">저는 부평공원 근처 살고 있구요</div>
-                <div class="line">코딩 열심히 배우겠습니당</div>
-            </div>
-            <div>
-                <div class="line bold">취미</div><hr>
-                <div class="line">게임, 운동</div>
-                <a href="https://op.gg/ko/lol/summoners/kr/%EA%B9%80%EA%B8%B0%EC%97%B0%EB%8B%98%EC%9D%98%EA%B0%9C-china"><div class="line">롤 계정</div></a>
-            </div>
-            <div>
-                <div class="line bold">학력</div><hr>
-                <div class="line">한신대 컴공 4학년 재학중</div>
-            </div>
-            <div>
-                <div class="line bold">보유 기술이나 자격증</div><hr>
-                <div class="line">
-                    <ul>
-                        <li>자바</li>
-                        <li>오라클</li>
-                        <li>C</li>
-                        <li>python</li>
-                        <li>정처기 필기</li>
-                        <li>리눅스 마스터 1차</li>
-                        <li>태권도 3단</li>
-                        <li>피아노 체르니 50</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="sidebar2">
-            <div class="line bold">우리집 꼬미</div>
-            <video src="../media/kkomi.mp4" autoplay loop muted style="width:100%"></video>
-            <div class="line">나이 : 6세</div>
-            <div class="line">성별 : 남</div>
-            <div class="line">비숑 + 푸들</div>
 
+<body>
+    <div id="container">
+        <div id="profile">
+            <div>
+                <img src="profile.jpg">
+            </div>
+            <div class="big">
+                Jung Eun Seong
+            </div>
+            <div><span class="material-symbols-outlined">cake</span></div>
+            <div>2001.11.19</div>
+            <div><span class="material-symbols-outlined ggimg">where_to_vote</span></div>
+            <div>bupyoeong park road 21</div>
+            <div><span class="material-symbols-outlined ggimg">mobile</span></div>
+            <div>010-1234-5678</div>
+            <div><span class="material-symbols-outlined ggimg">timer</span></div>
+            <div class="time"></div>
         </div>
-        <div id="footer">
-            <img src="https://ssl.pstatic.net/melona/libs/1538/1538381/39197f5a0198aa459339_20250730143412445.png"
-                 style="width: 20%; float: left;">
-            <div class="line">초록우산</div>
-            <div class="line">어린이와 당신을 썹포트유</div>
-            <div class="line">월 1만원 후원시 써브웨이 2만원 쿠폰 증정</div>
+        <div id="title">
+            <div class="bbig">Introduce page</div>
+        </div>
+        <div class="contents" id="page1">
+            <div><span class="material-symbols-outlined ctimg">work</span> 희망 직군</div>
+            <div class="small end">풀스택 개발자</div>
+            <div><span class="material-symbols-outlined ctimg">school</span> 학교</div>
+            <div class="table">
+                <table>
+                    <tr class="table_title">
+                        <td style="width: 300px; border: 2px solid white;">학교</td>
+                        <td style="width: 600px; border: 2px solid white;">기간</td>
+                    </tr>
+                    <tr>
+                        <td>용마초등학교</td>
+                        <td>2008.03 ~ 2014.02</td>
+                    </tr>
+                    <tr>
+                        <td>산곡남중학교</td>
+                        <td>2014.03 ~ 2017.02</td>
+                    </tr>
+                    <tr>
+                        <td>상정고등학교</td>
+                        <td>2017.03 ~ 2020.02</td>
+                    </tr>
+                    <tr>
+                        <td>한신대학교</td>
+                        <td>2020.03 ~</td>
+                    </tr>
+                </table>
+            </div>
+            <span onclick="fnNext(1)" class="material-symbols-outlined arrow">arrow_forward</span>
+        </div>
+        <div class="contents" id="page2">
+            <div><span class="material-symbols-outlined ctimg">work</span> 희망 직군</div>
+            <div class="small end">풀스택 개발자</div>
+            <div><span class="material-symbols-outlined ctimg">school</span> 학교</div>
+            <div class="table">
+                <table>
+                    <tr class="table_title">
+                        <td style="width: 300px; border: 2px solid white;">학교</td>
+                        <td style="width: 600px; border: 2px solid white;">기간</td>
+                    </tr>
+                    <tr>
+                        <td>용마초등학교</td>
+                        <td>2008.03 ~ 2014.02</td>
+                    </tr>
+                    <tr>
+                        <td>산곡남중학교</td>
+                        <td>2014.03 ~ 2017.02</td>
+                    </tr>
+                    <tr>
+                        <td>상정고등학교</td>
+                        <td>2017.03 ~ 2020.02</td>
+                    </tr>
+                    <tr>
+                        <td>한신대학교</td>
+                        <td>2020.03 ~</td>
+                    </tr>
+                </table>
+            </div>
+            <span onclick="fnBefore(1)" class="material-symbols-outlined backarrow">arrow_back</span>
+            <span onclick="fnNext(2)" class="material-symbols-outlined arrow">arrow_forward</span>
         </div>
     </div>
 </body>
+
 </html>
+<script>
+    setInterval(() => {
+        let datetime = new Date();
+        let obj = document.querySelector(".time");
+        let time = datetime.getHours() + " : "
+            + datetime.getMinutes() + " : "
+            + datetime.getSeconds();
+        obj.innerHTML = time;
+    }, 1000);
+
+    function fnNext(x){
+        let page = x + 1;
+        let showpage = document.querySelector(`#page${page}`);
+        let nonepage = document.querySelector(`#page${x}`);
+        console.log(nonepage);
+        
+        showpage.style.display = "block";
+        nonepage.style.display = "none";
+    }
+
+    function fnBefore(x){
+        let page = x - 1;
+        let showpage = document.querySelector(`#page${page}`);
+        let nonepage = document.querySelector(`#page${x}`);
+        showpage.style.display = "block";
+        nonepage.style.display = "none";
+    }
+</script>
