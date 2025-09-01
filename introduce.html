@@ -50,7 +50,7 @@
             height: 100px;
             box-sizing: border-box;
             text-align: center;
-            color: #ffaeaf;
+            color: rgb(79, 169, 230);
             background-color: white;
         }
 
@@ -69,7 +69,7 @@
             float: left;
             height: 700px;
             box-sizing: border-box;
-            color: #ffaeaf;
+            color: rgb(79, 169, 230);
             font-size: 40px;
             padding: 20px;
             font-weight: bold;
@@ -91,13 +91,13 @@
             font-size : 25px;
         }
         table, tr, td, td{
-            border: 1px solid #ffaeaf;
+            border: 1px solid rgb(79, 169, 230);
             border-collapse: collapse;
             margin: 10px 60px;
            
         }
         .table_title{
-            background-color: #ffaeaf;
+            background-color: rgb(79, 169, 230);
             color: white;
             border: 1px solid white;
             
@@ -117,12 +117,23 @@
             cursor: pointer;
         }
 
+        .backarrow:hover {
+            font-size: 65px;
+        }
         .arrow:hover {
             font-size: 65px;
         }
         
         #page2{
             display: none;
+        }
+
+        .music{
+            margin-left: 60px; 
+            margin-top: 20px; 
+            border: 1px solid rgb(79, 169, 230);
+            width: 200px;
+            height: 200px;
         }
     </style>
 </head>
@@ -136,7 +147,7 @@
             <div class="big">
                 Jung Eun Seong
             </div>
-            <div><span class="material-symbols-outlined">cake</span></div>
+            <div><span class="material-symbols-outlined ggimg">cake</span></div>
             <div>2001.11.19</div>
             <div><span class="material-symbols-outlined ggimg">where_to_vote</span></div>
             <div>bupyoeong park road 21</div>
@@ -179,35 +190,14 @@
             <span onclick="fnNext(1)" class="material-symbols-outlined arrow">arrow_forward</span>
         </div>
         <div class="contents" id="page2">
-            <div><span class="material-symbols-outlined ctimg">work</span> 희망 직군</div>
-            <div class="small end">풀스택 개발자</div>
-            <div><span class="material-symbols-outlined ctimg">school</span> 학교</div>
-            <div class="table">
-                <table>
-                    <tr class="table_title">
-                        <td style="width: 300px; border: 2px solid white;">학교</td>
-                        <td style="width: 600px; border: 2px solid white;">기간</td>
-                    </tr>
-                    <tr>
-                        <td>용마초등학교</td>
-                        <td>2008.03 ~ 2014.02</td>
-                    </tr>
-                    <tr>
-                        <td>산곡남중학교</td>
-                        <td>2014.03 ~ 2017.02</td>
-                    </tr>
-                    <tr>
-                        <td>상정고등학교</td>
-                        <td>2017.03 ~ 2020.02</td>
-                    </tr>
-                    <tr>
-                        <td>한신대학교</td>
-                        <td>2020.03 ~</td>
-                    </tr>
-                </table>
+            <div><span class="material-symbols-outlined ctimg">badminton</span> 취미 생활</div>
+            <div class="small end">배드민턴 치기, 게임 하기, 웹툰 보기, 야구 보기</div>
+            <div><span class="material-symbols-outlined ctimg">music_cast</span> 요즘 듣는 노래</div>
+            <div class="musicbox">
+                <div><img src="drive.jpg" class="music"></div>
+                <div class="small">Ed Sheeran - Drive</div>
             </div>
-            <span onclick="fnBefore(1)" class="material-symbols-outlined backarrow">arrow_back</span>
-            <span onclick="fnNext(2)" class="material-symbols-outlined arrow">arrow_forward</span>
+            <span onclick="fnBefore(2)" class="material-symbols-outlined backarrow">arrow_back</span>
         </div>
     </div>
 </body>
