@@ -7,18 +7,19 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <style>
-        body{
+        body {
             background-color: blanchedalmond;
         }
+
         #container {
             width: 80%;
             margin: 10px auto;
-            
+
         }
 
         #profile {
             width: 20%;
-            height: 800px;
+            height: 850px;
             background-color: rgb(79, 169, 230);
             text-align: center;
             color: white;
@@ -67,7 +68,7 @@
         .contents {
             width: 80%;
             float: left;
-            height: 700px;
+            height: 750px;
             box-sizing: border-box;
             color: rgb(79, 169, 230);
             font-size: 40px;
@@ -80,60 +81,85 @@
         #profile {
             font-size: 20px;
         }
-        .small{
+
+        .small {
             font-size: 25px;
             margin: 10px 0px 10px 60px;
         }
-        .end{
+
+        .end {
             margin-bottom: 60px;
         }
-        .table{
-            font-size : 25px;
+
+        .table {
+            font-size: 25px;
         }
-        table, tr, td, td{
+
+        table,
+        tr,
+        td,
+        td {
             border: 1px solid rgb(79, 169, 230);
             border-collapse: collapse;
             margin: 10px 60px;
-           
+
         }
-        .table_title{
+
+        .table_title {
             background-color: rgb(79, 169, 230);
             color: white;
             border: 1px solid white;
-            
+
         }
-        .arrow{
+
+        .arrow {
             font-size: 60px;
             position: absolute;
             right: 10px;
-            bottom : 10px;
+            bottom: 10px;
             cursor: pointer;
         }
-        .backarrow{
+
+        .backarrow {
             font-size: 60px;
             position: absolute;
             left: 10px;
-            bottom : 10px;
+            bottom: 10px;
             cursor: pointer;
         }
 
         .backarrow:hover {
             font-size: 65px;
         }
+
         .arrow:hover {
             font-size: 65px;
         }
-        
-        #page2{
+
+        #page2, #page3 {
             display: none;
         }
+        
 
-        .music{
-            margin-left: 60px; 
-            margin-top: 20px; 
+        .music {
+            margin-left: 60px;
+            margin-right: 60px;
+            margin-top: 20px;
             border: 1px solid rgb(79, 169, 230);
             width: 200px;
             height: 200px;
+            float: left;
+            cursor: pointer;
+        }
+
+        .musicbox {
+            margin: 0px 60px;
+        }
+
+        .eagles {
+            font-size: 100px;
+            text-align: center;
+            color: orange;
         }
     </style>
 </head>
@@ -150,7 +176,7 @@
             <div><span class="material-symbols-outlined ggimg">cake</span></div>
             <div>2001.11.19</div>
             <div><span class="material-symbols-outlined ggimg">where_to_vote</span></div>
-            <div>bupyoeong park road 21</div>
+            <div>bupyeong park road 21</div>
             <div><span class="material-symbols-outlined ggimg">mobile</span></div>
             <div>010-1234-5678</div>
             <div><span class="material-symbols-outlined ggimg">timer</span></div>
@@ -194,16 +220,37 @@
             <div class="small end">배드민턴 치기, 게임 하기, 웹툰 보기, 야구 보기</div>
             <div><span class="material-symbols-outlined ctimg">music_cast</span> 요즘 듣는 노래</div>
             <div class="musicbox">
-                <div><img src="drive.jpg" class="music"></div>
-                <div class="small">Ed Sheeran - Drive</div>
+                <div><img src="drive.jpg" class="music" onclick="fnLocation(1)"></div>
+                <div><img src="hanroro.jpg" class="music" onclick="fnLocation(2)"></div>
+                <div><img src="cosmos.jpg" class="music" onclick="fnLocation(3)" style="margin-left: 90px;"></div>
+                <div class="small" style="clear: both; float: left;">Ed Sheeran - Drive</div>
+                <div class="small" style="float: left; margin-left: 95px;">한로로 - 사랑하게될거야</div>
+                <div class="small" style="float: left; margin-left: 100px;">B.I - COSMOS</div>
             </div>
             <span onclick="fnBefore(2)" class="material-symbols-outlined backarrow">arrow_back</span>
+            <span onclick="fnNext(2)" class="material-symbols-outlined arrow">arrow_forward</span>
+        </div>
+        <div class="contents" id="page3">
+            <div style="text-align: center;"><img src="kbo.jpg"></div>
+            <div class="eagles"></div>
+            <span onclick="fnBefore(3)" class="material-symbols-outlined backarrow">arrow_back</span>
+            <span onclick="fnGame()" class="material-symbols-outlined arrow">stadia_controller</span>
         </div>
     </div>
 </body>
 
 </html>
 <script>
+    let obj = document.querySelector(".eagles");
+    let txt = "한화이글스 화이팅!!!";
+    let i = 0;
+    setInterval(() => {
+        obj.innerHTML = obj.innerHTML + txt.charAt(i++);
+        if (i > txt.length) {
+            i = 0;
+            obj.innerHTML = "";
+        }
+    }, 300);
     setInterval(() => {
         let datetime = new Date();
         let obj = document.querySelector(".time");
@@ -213,21 +260,35 @@
         obj.innerHTML = time;
     }, 1000);
 
-    function fnNext(x){
+    function fnNext(x) {
         let page = x + 1;
         let showpage = document.querySelector(`#page${page}`);
         let nonepage = document.querySelector(`#page${x}`);
         console.log(nonepage);
-        
+
         showpage.style.display = "block";
         nonepage.style.display = "none";
     }
 
-    function fnBefore(x){
+    function fnBefore(x) {
         let page = x - 1;
         let showpage = document.querySelector(`#page${page}`);
         let nonepage = document.querySelector(`#page${x}`);
         showpage.style.display = "block";
         nonepage.style.display = "none";
+    }
+
+    function fnLocation(music) {
+        if (music == 1) {
+            location.href = "https://www.youtube.com/watch?v=Cf1hKtrA9lg&list=RDCf1hKtrA9lg&start_radio=1";
+        } else if (music == 2) {
+            location.href = "https://www.youtube.com/watch?v=h0KIWaUEIgQ&list=RDh0KIWaUEIgQ&start_radio=1";
+        } else if (music == 3) {
+            location.href = "https://www.youtube.com/watch?v=rahaJHjMn6g&list=RDrahaJHjMn6g&start_radio=1";
+        }
+    }
+
+    function fnGame(){
+        window.open("game.html", "game", "width=1000 height=1000")
     }
 </script>
